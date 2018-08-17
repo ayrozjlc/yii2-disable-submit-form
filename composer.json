@@ -1,0 +1,32 @@
+{
+    "name": "ayrozjlc/yii2-disable-submit-form",
+    "description": "Yii2 asset to automatically disable submit form on Yii2 ActiveForm.",
+    "keywords": [
+        "yii",
+        "yii2",
+        "activeform",
+        "jquery",
+        "disable",
+        "block-ui",
+        "blockUI"
+    ],
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "homepage": "https://github.com/ayrozjlc/yii2-disable-submit-form",
+    "authors": [
+        {
+            "name": "José López Chávez",
+            "email": "ayroz.jlc@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0",
+        "ayrozjlc/yii2-blockui": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "ayrozjlc\\disablesubmit\\": "src"
+        }
+    }
+}
