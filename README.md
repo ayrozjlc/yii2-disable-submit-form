@@ -1,4 +1,4 @@
-Faryshta Yii2 Disable Buttons
+Yii2 Disable Buttons
 =========================
 
 Yii2 asset to automatically disable submit buttons on Yii2 [ActiveForm](http://www.yiiframework.com/doc-2.0/yii-widgets-activeform.html).
