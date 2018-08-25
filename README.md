@@ -50,7 +50,9 @@ add in view
 ```php
 $customScript = "
 $('#id-form').disableForm({
-    disabled_text : 'message'
+    disabled_text : 'message',
+	// block : true // to activate plugin blockui
+	// block_div : '#element' // by default it is applied to the parent element of the form
 });";
 $this->registerJs($customScript, \yii\web\View::POS_READY);
 ```
