@@ -62,17 +62,15 @@ $.fn.extend({
 
     enabled_button : function()
     {
-        if ($(this).find('.has-error').length > 0) {
-            var $this = $(this);
-            var $btn = $this.find(this._btn);
+        var $this = $(this);
+        var $btn = $this.find(this._btn);
 
-            if ($btn.data('block-ui')) {
-                var element = this.div_block($btn);
-                element.unblock();
-            } else {
-                $btn.removeAttr('disabled')
-                    .html($btn.data('enabled-text'));
-            }
+        if ($btn.data('block-ui')) {
+            var element = this.div_block($btn);
+            element.unblock();
+        } else {
+            $btn.removeAttr('disabled')
+                .html($btn.data('enabled-text'));
         }
     }
 });
@@ -81,10 +79,4 @@ $('body').on('beforeValidate', 'form.disable-submit-buttons', function (e) {
     $(this).disabled_button();
 }).on('afterValidate', 'form.disable-submit-buttons', function (e) {
     $(this).enabled_button();
-});
-
-$(document).ajaxStart(function() {
-    $('form.disable-submit-buttons').disabled_button();
-}).ajaxStop(function() {
-    $('form.disable-submit-buttons').enabled_button();
-});
+})
