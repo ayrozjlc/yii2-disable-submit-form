@@ -75,8 +75,16 @@ $.fn.extend({
     }
 });
 
-$('body').on('beforeValidate', 'form.disable-submit-buttons', function (e) {
+$(document).on('beforeValidate', 'form.disable-submit-buttons', function (e) {
     $(this).disabled_button();
-}).on('afterValidate', 'form.disable-submit-buttons', function (e) {
+}).on('afterValidate', 'form.disable-submit-buttons', function (event, messages, errors) {
+    if (errors.length == 0) {
+        return;
+    }
+
     $(this).enabled_button();
-})
+}).on('beforeSubmit', function () {
+  $(this).disabled_button();
+}).on('ajaxComplete', function () {
+  $(this).enabled_button();
+});
