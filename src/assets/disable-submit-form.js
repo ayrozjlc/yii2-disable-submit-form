@@ -46,7 +46,7 @@ $.fn.extend({
     {
         var $this = $(this);
         var $btn = $this.find(this._btn);
-        var before_text = ($btn.data('enabled-text') !== undefined && $btn.data('enabled-text') !== '' ) ? $btn.data('enabled-text') : $btn.text();
+        var before_text = ($btn.data('enabled-text') !== undefined && $btn.data('enabled-text') !== '' ) ? $btn.data('enabled-text') : $btn.html();
 
         if ($btn.data('block-ui')) {
             var options = this.block_css;
